@@ -1,6 +1,7 @@
 import requests
 import json
 from secret import client_id, client_secret
+from scrape import scrapePlaylist
 
 
 auth_url = 'https://accounts.spotify.com/api/token'
@@ -21,18 +22,17 @@ headers = {
 # 'https://api.spotify.com/v1/tracks/id' for analyzing track features
 
 if __name__ == '__main__':
-    id = 'anytrackuri' #testing on this track
-    res =requests.get(f'https://api.spotify.com/v1/tracks/{id}', headers=headers)
-    content = res.json()
-    with open('content.txt', 'w') as f:
-        for category in content.keys():
-            f.write(f'{category}:\n')
-            try:
-                iter(content)
-                for line in content[category]:
-                    f.write(f'{line}\n')
-                f.write('\n')
-            except TypeError:
-                continue
-
-
+    # id = 'anytrackuri' #testing on any track
+    # res =requests.get(f'https://api.spotify.com/v1/tracks/{id}', headers=headers)
+    # content = res.json()
+    # with open('content.txt', 'w') as f:
+    #     for category in content.keys():
+    #         f.write(f'{category}:\n')
+    #         try:
+    #             iter(content)
+    #             for line in content[category]:
+    #                 f.write(f'{line}\n')
+    #             f.write('\n')
+    #         except TypeError:
+    #             continue
+    scrapePlaylist(headers)
