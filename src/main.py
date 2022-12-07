@@ -2,6 +2,7 @@ import requests
 import json
 from secret import client_id, client_secret
 from scrape import scrapePlaylist
+from explore import exploreTracks, exploreAudio
 
 
 auth_url = 'https://accounts.spotify.com/api/token'
@@ -22,17 +23,6 @@ headers = {
 # 'https://api.spotify.com/v1/tracks/id' for analyzing track features
 
 if __name__ == '__main__':
-    # id = 'anytrackuri' #testing on any track
-    # res =requests.get(f'https://api.spotify.com/v1/tracks/{id}', headers=headers)
-    # content = res.json()
-    # with open('content.txt', 'w') as f:
-    #     for category in content.keys():
-    #         f.write(f'{category}:\n')
-    #         try:
-    #             iter(content)
-    #             for line in content[category]:
-    #                 f.write(f'{line}\n')
-    #             f.write('\n')
-    #         except TypeError:
-    #             continue
-    scrapePlaylist(headers)
+    scrapePlaylist(headers, run = False)
+    exploreTracks(headers, id = '4FyesJzVpA39hbYvcseO2d?si=6007e7e8fd4e4b89', run = False)
+    exploreAudio(headers, id = '4FyesJzVpA39hbYvcseO2d?si=6007e7e8fd4e4b89', run = True)
