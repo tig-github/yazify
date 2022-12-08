@@ -1,6 +1,6 @@
 # test file just to explore structure of json objects returned by spotify api
 import requests
-import json
+import pandas
 
 
 # explores general information from a track
@@ -40,3 +40,4 @@ def exploreAudio(headers, id = '', run = True):
                 f.write('\n')
             except TypeError:
                 continue
+           

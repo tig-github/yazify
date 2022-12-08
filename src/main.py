@@ -2,7 +2,8 @@ import requests
 import json
 from secret import client_id, client_secret
 from scrape import scrapePlaylist
-from explore import exploreTracks, exploreAudio
+from explore import *
+from process import *
 
 
 auth_url = 'https://accounts.spotify.com/api/token'
@@ -26,3 +27,4 @@ if __name__ == '__main__':
     scrapePlaylist(headers, run = False)
     exploreTracks(headers, id = '4FyesJzVpA39hbYvcseO2d?si=6007e7e8fd4e4b89', run = False)
     exploreAudio(headers, id = '4FyesJzVpA39hbYvcseO2d?si=6007e7e8fd4e4b89', run = True)
+    processTrack(headers, id = '4FyesJzVpA39hbYvcseO2d?si=6007e7e8fd4e4b89', run = True)
