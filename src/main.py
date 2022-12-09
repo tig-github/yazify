@@ -24,8 +24,7 @@ headers = {
 # 'https://api.spotify.com/v1/tracks/id' for analyzing track features
 
 if __name__ == '__main__':
-    scrapePlaylist(headers, run = True)
+    playlist_response = scrapePlaylist(headers, run = True, save = False)
     exploreTracks(headers, id = '4FyesJzVpA39hbYvcseO2d?si=6007e7e8fd4e4b89', run = False)
     exploreAudio(headers, id = '4FyesJzVpA39hbYvcseO2d?si=6007e7e8fd4e4b89', run = False)
-    processTrack(headers, id = '4FyesJzVpA39hbYvcseO2d?si=6007e7e8fd4e4b89', run = False)
-    processPlaylist(headers, run = True)
+    processPlaylist(headers, playlist_response, run = True)

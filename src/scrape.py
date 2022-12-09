@@ -1,9 +1,10 @@
 import requests
 import json
 
-def scrapePlaylist(headers, run = True):
+def scrapePlaylist(headers, id = '2ttf8zNG34K5SSdZRzqhVR?si=574666c4176c41d0', run = True, save = True):
     if not run: return
-    id = '2ttf8zNG34K5SSdZRzqhVR?si=574666c4176c41d0' #playlist will scrape for now - can expand later
+    if save: open('playlist.txt', 'w').close()
+    if save: open('index.json', 'w').close()
     res = requests.get(f'https://api.spotify.com/v1/playlists/{id}', headers=headers)
     next_res = res.json()['tracks']
     song_num = 0
@@ -12,7 +13,7 @@ def scrapePlaylist(headers, run = True):
     while next_res:
         with open('./txt/playlist.txt', 'a', encoding="utf-8") as f:
             for track in content['items']:
-                f.write(f"{song_num} : {track['track']['name']}\n")
+                if save: f.write(f"{song_num} : {track['track']['name']}\n")
                 song_num += 1
                 index[track['track']['id']] = track['track']['name']
         next_res = content['next']
@@ -22,6 +23,6 @@ def scrapePlaylist(headers, run = True):
             break #finished scraping playlist
         content = next_res.json()
     with open("./txt/index.json", "w") as f:
-        json.dump(index, f)
-
+        if save: json.dump(index, f)
+    return res
 
