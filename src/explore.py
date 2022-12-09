@@ -41,3 +41,20 @@ def exploreAudio(headers, id = '', run = True):
             except TypeError:
                 continue
            
+def explorePlaylist(headers, id = '', run = True):
+    if not run: return
+    res = requests.get(f'https://api.spotify.com/v1/playlists/{id}', headers=headers)
+    content = res.json()
+    with open('./txt/playlistcontent.txt', 'w') as f:
+        for category in content.keys():
+            f.write(f'{category}:\n')
+            try:
+                iter(content[category])
+                if type(content[category]) == str:
+                    print(content[category])
+                    continue
+                for line in content[category]:
+                    f.write(f'{line}\n')
+                f.write('\n')
+            except TypeError:
+                continue

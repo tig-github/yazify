@@ -27,4 +27,5 @@ if __name__ == '__main__':
     playlist_response = scrapePlaylist(headers, run = True, save = False)
     exploreTracks(headers, id = '4FyesJzVpA39hbYvcseO2d?si=6007e7e8fd4e4b89', run = False)
     exploreAudio(headers, id = '4FyesJzVpA39hbYvcseO2d?si=6007e7e8fd4e4b89', run = False)
+    explorePlaylist(headers, id= '2ttf8zNG34K5SSdZRzqhVR?si=574666c4176c41d0', run = False)
     processPlaylist(headers, playlist_response, run = True)
