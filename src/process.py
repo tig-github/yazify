@@ -1,5 +1,6 @@
 # process data about tracks and playlists
 import requests
+import json
 import pandas
 
 
@@ -26,9 +27,14 @@ def processTrack(headers, id, run = False):
     track_frame['mode'] = audio_content['track']['mode']
         
     track_frame = pandas.DataFrame(track_frame, index=[0])
-    print(track_frame)
-    
+    return track_frame    
 
-# the idea is to process some user information to generate scores for each track
-def processUser():
-    pass
+def processPlaylist(headers, run = True):
+    if not run: return
+    playlist_frame = {}
+    with open('./txt/index.json', 'r') as index:
+        index = json.load(index)
+        for song in index.keys():
+            playlist_frame[index[song]] = processTrack(headers, id = song)
+    playlist_frame = pandas.DataFrame(playlist_frame)
+    playlist_frame.to_csv('./txt/dataframe.csv', index=[0])
