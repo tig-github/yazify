@@ -4,21 +4,29 @@ import json
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 import pandas
-
+from time import sleep
 
 # processes track data and audio data into dictionary
-def processTrack(track_content, audio_features_content, run = True):
+def processTrack(track_content, audio_content, run = True):
     if not run: return
-
     track_frame = [
-        track_content['track']['name'],
-        track_content['track']['album']['name'],
-        track_content['track']['album']['release_date'],
-        track_content['track']['artists'][0]['id'],
-        track_content['track']['popularity'],
+        track_content['name'],
+        track_content['album']['name'],
+        track_content['album']['release_date'],
+        track_content['artists'][0]['id'],
+        track_content['popularity'],
+        audio_content['acousticness'],
+        audio_content['danceability'],
+        audio_content['duration_ms'],
+        audio_content['energy'],
+        audio_content['instrumentalness'],
+        audio_content['liveness'],
+        audio_content['loudness'],
+        audio_content['mode'],
+        audio_content['tempo'],
+        audio_content['valence']
     ]
     # album info should be scored lower than track and audio information
-    
     return track_frame
 
 
@@ -26,32 +34,67 @@ def processTrack(track_content, audio_features_content, run = True):
 def processTrackBatch(headers, playlist_frame, ids, run = True):
     if not run: return
     #ids = str(ids).lstrip('[').rstrip(']')
-    ids = ','.join(ids)
-    track_batch = requests.get(f'https://api.spotify.com/v1/track-features/{str(ids)}', headers=headers)
-    audio_batch = requests.get(f'https://api.spotify.com/v1/audio-features/{str(ids)}', headers=headers)
-    print(track_batch.json())
-    # for i,x in enumerate(track_batch): #pseudocode
-    #     playlist_frame.loc[i] = processTrack(track_batch.json(), audio_batch.json())
-    # return playlist_frame
+    #ids = ','.join(ids)
+    notNone = lambda x : x != None
+    
+    ids1 = ','.join(list(filter(notNone, ids))[:50])
+    ids2 = ','.join(list(filter(notNone, ids))[50:])
+
+    track_batch1 = requests.get(f'https://api.spotify.com/v1/tracks?ids={ids1}', headers=headers)
+    audio_batch1 = requests.get(f'https://api.spotify.com/v1/audio-features?ids={ids1}', headers=headers)
+    prev_length = len(playlist_frame)
+    for i in range(min(len(audio_batch1.json()['audio_features']), len(track_batch1.json()['tracks']))):
+        if not audio_batch1.json()['audio_features'][i]:
+            continue
+        processed_tracks1 = processTrack(track_batch1.json()['tracks'][i], audio_batch1.json()['audio_features'][i])
+        playlist_frame.loc[i+prev_length] = processed_tracks1
+
+    if ids2:
+        track_batch2 = requests.get(f'https://api.spotify.com/v1/tracks?ids={ids2}', headers=headers)
+        audio_batch2 = requests.get(f'https://api.spotify.com/v1/audio-features?ids={ids1}', headers=headers)
+
+        prev_length = len(playlist_frame)
+        for i in range(min(len(audio_batch2.json()['audio_features']), len(track_batch2.json()['tracks']))):
+            if not (audio_batch2.json()['audio_features'][i] and track_batch2.json()['tracks'][i]):
+                continue
+            #print('index error at i=',i,'for batch of lengths', len(audio_batch2.json()['audio_features']), len(track_batch2.json()['tracks']))
+            processed_tracks2 = processTrack(track_batch2.json()['tracks'][i], audio_batch2.json()['audio_features'][i])
+            playlist_frame.loc[i+prev_length] = processed_tracks2
+
+    #sleep(2) # to avoid rate limiting
+    return playlist_frame
 
 
 def processPlaylist(headers, res, run = True):
     if not run: return
 
-    playlist = res.json()
+    playlist = res.json()['tracks']
     playlist_frame = {
         'name' : [],
         'album' : [],
         'release' : [],
         'artist' : [],
         'popularity' : [],
+        'acousticness' : [],
+        'danceability' : [],
+        'duration' : [],
+        'energy' : [],
+        'insturmentalness' : [],
+        'liveness' : [],
+        'loudness' : [],
+        'mode' : [],
+        'tempo' : [],
+        'valence' : []
         }
     playlist_frame = pandas.DataFrame(playlist_frame)
+    i = 0
     while playlist:
-        ids = [track['track']['id'] for track in playlist['tracks']['items']]
+        print(i)
+        ids = [track['track']['id'] for track in playlist['items']]
         playlist_frame = processTrackBatch(headers, playlist_frame, ids)
         try:
-            playlist = requests.get(playlist['next'], headers=headers)
+            playlist = requests.get(playlist['next'], headers=headers).json()
         except requests.exceptions.MissingSchema:
             break #finished scraping playlist
+        i += 1  
     playlist_frame.to_csv('./txt/dataframe.csv')
