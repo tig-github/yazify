@@ -49,22 +49,53 @@ def processTrackBatch(headers, playlist_frame, ids, run = True):
         processed_tracks1 = processTrack(track_batch1.json()['tracks'][i], audio_batch1.json()['audio_features'][i])
         playlist_frame.loc[i+prev_length] = processed_tracks1
 
-    if ids2:
-        track_batch2 = requests.get(f'https://api.spotify.com/v1/tracks?ids={ids2}', headers=headers)
-        audio_batch2 = requests.get(f'https://api.spotify.com/v1/audio-features?ids={ids1}', headers=headers)
+    if not ids2: return
+    track_batch2 = requests.get(f'https://api.spotify.com/v1/tracks?ids={ids2}', headers=headers)
+    audio_batch2 = requests.get(f'https://api.spotify.com/v1/audio-features?ids={ids1}', headers=headers)
 
-        prev_length = len(playlist_frame)
-        for i in range(min(len(audio_batch2.json()['audio_features']), len(track_batch2.json()['tracks']))):
-            if not (audio_batch2.json()['audio_features'][i] and track_batch2.json()['tracks'][i]):
-                continue
-            #print('index error at i=',i,'for batch of lengths', len(audio_batch2.json()['audio_features']), len(track_batch2.json()['tracks']))
-            processed_tracks2 = processTrack(track_batch2.json()['tracks'][i], audio_batch2.json()['audio_features'][i])
-            playlist_frame.loc[i+prev_length] = processed_tracks2
+    prev_length = len(playlist_frame)
+    for i in range(min(len(audio_batch2.json()['audio_features']), len(track_batch2.json()['tracks']))):
+        if not (audio_batch2.json()['audio_features'][i] and track_batch2.json()['tracks'][i]):
+            continue
+        #print('index error at i=',i,'for batch of lengths', len(audio_batch2.json()['audio_features']), len(track_batch2.json()['tracks']))
+        processed_tracks2 = processTrack(track_batch2.json()['tracks'][i], audio_batch2.json()['audio_features'][i])
+        playlist_frame.loc[i+prev_length] = processed_tracks2
 
     #sleep(2) # to avoid rate limiting
     return playlist_frame
 
 
+#user will refer to a single user-inputted track
+def processUser(headers, id, run = True):
+    if not run: return
+    
+    track_frame = {
+        'name' : [],
+        'album' : [],
+        'release' : [],
+        'artist' : [],
+        'popularity' : [],
+        'acousticness' : [],
+        'danceability' : [],
+        'duration' : [],
+        'energy' : [],
+        'insturmentalness' : [],
+        'liveness' : [],
+        'loudness' : [],
+        'mode' : [],
+        'tempo' : [],
+        'valence' : []
+        }
+    user_frame = pandas.DataFrame(user_frame)
+    
+    track_content = requests.get(requests.get(f'https://api.spotify.com/v1/track/{id}', headers=headers))
+    audio_content = requests.get(f'https://api.spotify.com/v1/audio-feature/{id}', headers=headers)
+    user_frame.loc[0] = processTrack(track_content, audio_content, run = True)
+    
+    return user_frame
+
+
+# processes playlist data into csv
 def processPlaylist(headers, res, run = True):
     if not run: return
 
@@ -87,14 +118,11 @@ def processPlaylist(headers, res, run = True):
         'valence' : []
         }
     playlist_frame = pandas.DataFrame(playlist_frame)
-    i = 0
     while playlist:
-        print(i)
         ids = [track['track']['id'] for track in playlist['items']]
         playlist_frame = processTrackBatch(headers, playlist_frame, ids)
         try:
             playlist = requests.get(playlist['next'], headers=headers).json()
         except requests.exceptions.MissingSchema:
             break #finished scraping playlist
-        i += 1  
     playlist_frame.to_csv('./txt/dataframe.csv')
