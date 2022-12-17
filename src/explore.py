@@ -1,6 +1,5 @@
 # test file just to explore structure of json objects returned by spotify api
 import requests
-import pandas
 
 
 # explores general information from a track

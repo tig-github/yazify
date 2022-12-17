@@ -69,7 +69,7 @@ def processTrackBatch(headers, playlist_frame, ids, run = True):
 def processUser(headers, id, run = True):
     if not run: return
     
-    track_frame = {
+    user_frame = {
         'name' : [],
         'album' : [],
         'release' : [],
@@ -88,11 +88,11 @@ def processUser(headers, id, run = True):
         }
     user_frame = pandas.DataFrame(user_frame)
     
-    track_content = requests.get(requests.get(f'https://api.spotify.com/v1/track/{id}', headers=headers))
-    audio_content = requests.get(f'https://api.spotify.com/v1/audio-feature/{id}', headers=headers)
-    user_frame.loc[0] = processTrack(track_content, audio_content, run = True)
-    
-    return user_frame
+    track_content = requests.get(f'https://api.spotify.com/v1/tracks/{id}', headers=headers)
+    audio_content = requests.get(f'https://api.spotify.com/v1/audio-features/{id}', headers=headers)
+
+    user_frame.loc[0] = processTrack(track_content.json(), audio_content.json(), run = True)
+    user_frame.to_csv('./csv/user.csv')    
 
 
 # processes playlist data into csv
@@ -125,4 +125,4 @@ def processPlaylist(headers, res, run = True):
             playlist = requests.get(playlist['next'], headers=headers).json()
         except requests.exceptions.MissingSchema:
             break #finished scraping playlist
-    playlist_frame.to_csv('./txt/dataframe.csv')
+    playlist_frame.to_csv('./csv/dataframe.csv')
