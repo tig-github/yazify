@@ -29,6 +29,6 @@ if __name__ == '__main__':
     exploreAudio(headers, id = '4FyesJzVpA39hbYvcseO2d?si=6007e7e8fd4e4b89', run = False)
     explorePlaylist(headers, id= '2ttf8zNG34K5SSdZRzqhVR?si=574666c4176c41d0', run = False)
     processPlaylist(headers, playlist_response, run = False)
-    processUser(headers, id = '5vL1hYg0JKK1SGrsD7EMWT?si=81ecf5afc21343e4', run = True)
+    processUser(headers, id = '1DZx0LEctNXUHQ9VQFKlgl?si=6508fbe3086b415a', run = True)
     scoreSimilarity('./csv/user.csv', './csv/dataframe.csv', run = True)
     getScores('./csv/scores.csv', run = True)
