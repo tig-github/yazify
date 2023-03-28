@@ -2,3 +2,5 @@ src/secret.py
 src/txt
 src/csv
 __pycache__
+backend/env
+backend/__pycache__

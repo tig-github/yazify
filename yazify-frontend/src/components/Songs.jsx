@@ -1,7 +1,7 @@
-import { React } from 'react';
+import { React } from "react";
 
-const Songs = () => {
-    return <></>;
-}
+const Songs = (setter) => {
+  return <></>;
+};
 
 export default Songs;
