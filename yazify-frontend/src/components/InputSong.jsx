@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Input } from "@chakra-ui/react";
 import axios from "axios";
 
-const InputSong = (setter) => {
+const InputSong = ({ setter }, { test }) => {
   const [song, setSong] = useState("");
 
   const handleChange = (event) => {
@@ -10,24 +10,22 @@ const InputSong = (setter) => {
     setSong(value);
   };
 
+  const getSongs = async () => {
+    try {
+      const res = await axios.get(`/songs?song=${song}`);
+      console.log(res);
+      //console.log(res["data"]["songs"]);
+      setter(res["data"]["songs"]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    setter(["Generating Song Recommendations"]);
     // now sends song to backend, which then returns a list to render in Songs.jsx
-    axios({
-      method: "GET",
-      url: "songs",
-    })
-      .then((response) => {
-        const res = response.data;
-        alert(res);
-      })
-      .catch((error) => {
-        if (error.response) {
-          console.log(error.response);
-          console.log(error.response.status);
-          console.log(error.response.headers);
-        }
-      });
+    getSongs();
   };
 
   return (

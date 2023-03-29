@@ -45,7 +45,7 @@ def scoreSimilarity(user, playlist, run = True):
                                                 duration_score, energy_score, insturmentalness_score, liveness_score, loudness_score,
                                                 mode_score, tempo_score, valence_score)]
                 
-    scores_frame.to_csv('./csv/scores.csv')
+    scores_frame.to_csv('./app/csv/scores.csv')
     
     
 # returns highest 5 scores
@@ -54,6 +54,8 @@ def getScores(scores, run = True):
     scores = pandas.read_csv(scores)
     scores = scores.sort_values(by = 'score', ascending = False)
     scores.drop(columns = scores.columns[0], axis = 1, inplace= True)
-    scores.to_csv('./csv/sorted.csv')
-
+    scores.to_csv('./app/csv/sorted.csv')
     print(scores)
+    res = scores['name'].values.tolist()[:5]
+    print(res)
+    return res

@@ -1,6 +1,5 @@
 # process data about tracks and playlists
 import requests
-import json
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 import pandas
@@ -8,6 +7,7 @@ from time import sleep
 
 # processes track data and audio data into dictionary
 def processTrack(track_content, audio_content, run = True):
+
     if not run: return
     track_frame = [
         track_content['name'],
@@ -92,7 +92,7 @@ def processUser(headers, id, run = True):
     audio_content = requests.get(f'https://api.spotify.com/v1/audio-features/{id}', headers=headers)
 
     user_frame.loc[0] = processTrack(track_content.json(), audio_content.json(), run = True)
-    user_frame.to_csv('./csv/user.csv')    
+    user_frame.to_csv('./app/csv/user.csv')    
 
 
 # processes playlist data into csv
@@ -125,4 +125,4 @@ def processPlaylist(headers, res, run = True):
             playlist = requests.get(playlist['next'], headers=headers).json()
         except requests.exceptions.MissingSchema:
             break #finished scraping playlist
-    playlist_frame.to_csv('./csv/dataframe.csv')
+    playlist_frame.to_csv('./app/csv/dataframe.csv')

@@ -8,7 +8,8 @@ function App() {
   const [songs, setSongs] = useState([]);
 
   useEffect(() => {
-    alert(songs);
+    // alert(songs);
+    console.log(songs);
   }, [songs]);
 
   return (
@@ -18,8 +19,8 @@ function App() {
           <Heading as="h1" color="Green" mt="3.5rem">
             Yazify
           </Heading>
-          <InputSong setter={setSongs} />
-          <Songs songs={songs} />
+          <InputSong setter={setSongs} test={songs} />
+          {songs && <Songs songs={songs} />}
         </Stack>
       </Box>
     </ChakraProvider>
