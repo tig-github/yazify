@@ -5,10 +5,9 @@ import Songs from "./components/Songs.jsx";
 import { ChakraProvider, Heading, Stack, Box } from "@chakra-ui/react";
 
 function App() {
-  const [songs, setSongs] = useState([]);
+  const [songs, setSongs] = useState(["Enter a Spotify Song ID"]);
 
   useEffect(() => {
-    // alert(songs);
     console.log(songs);
   }, [songs]);
 
@@ -16,7 +15,7 @@ function App() {
     <ChakraProvider>
       <Box bg="black" w="100%" h="calc(100vh)">
         <Stack spacing="2rem" align="center">
-          <Heading as="h1" color="Green" mt="3.5rem">
+          <Heading as="h1" color="Green" fontSize="6xl" mt="3.5rem" mb="4rem">
             Yazify
           </Heading>
           <InputSong setter={setSongs} test={songs} />

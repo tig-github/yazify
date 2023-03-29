@@ -31,8 +31,12 @@ const InputSong = ({ setter }, { test }) => {
   return (
     <form onSubmit={handleSubmit}>
       <Input
+        size="lg"
+        borderColor="#228B22"
         color="green"
         type="text"
+        _hover={{ color: "#228B22", borderColor: "#228B22" }}
+        focusBorderColor="#228B22"
         value={song}
         onChange={handleChange}
       ></Input>
