@@ -1,11 +1,10 @@
 import pandas
+import numpy as np
+
 
 # brute force approach to scoring
 # simply calculate similarity weighting different features differently
-
-
-def scoreSimilarity(user, playlist, run = True):
-    if not run: return
+def bruteForce(user, playlist):
     bool_similarity = lambda user,song,w : (user == song) * w 
     cont_similarity = lambda user,song,w,c : c*abs(user - song) * w
     multisum = lambda *args : sum(args)
@@ -44,13 +43,60 @@ def scoreSimilarity(user, playlist, run = True):
                 multisum(name_score, album_score, artist_score, popularity_score, acoustic_score, danceability_score,
                                                 duration_score, energy_score, insturmentalness_score, liveness_score, loudness_score,
                                                 mode_score, tempo_score, valence_score)]
-                
+    return scores_frame
+
+# more effective scoring using geometric similarity
+def cosineSimilarity(user, playlist):
+    cos_similarity = lambda x,y : np.dot(x,y) / (x.size * y.size)
+    user = pandas.read_csv(user).to_numpy()
+    playlist_df = pandas.read_csv(playlist) # save separately to build scores df after calculating cosine score
+    playlist = playlist_df.to_numpy()
+    scores = {
+        'name' : [],
+        'score' : []
+    }
+    scores_frame = pandas.DataFrame(scores)
+    
+    # currently only using numeric data, categorical data will need separate handling later
+    #print(user)
+
+    playlist = np.delete(playlist, (0), axis=0)
+    for _ in range(5):
+        user = np.delete(user, 0, axis=1)
+        playlist = np.delete(playlist, 0, axis=1)
+    
+    #print(user.size, playlist.size)
+    #print(user, playlist)
+    user.reshape(-1)
+    #playlist.reshape(3, 4)
+    similarities = cos_similarity(user, playlist.T).T
+    print(similarities)
+    for i in range(len(similarities)):
+        scores_frame.loc[i] = [playlist_df.loc[i]['name'], similarities[i][0]]
+    return scores_frame
+    
+    
+    
+    
+# PCA scoring - more robust but will require some data manipulation
+def principleComponentAnalysis(user, playlist):
+    user = pandas.read_csv(user)
+    playlist = pandas.read_csv(playlist)
+    X = playlist.to_numpy()[:,1:]
+    print(X)
+
+def scoreSimilarity(user, playlist, metric="cosine", run = True):
+    if not run: return
+    if metric == "brute":
+        scores_frame = bruteForce(user, playlist)
+    elif metric == "cosine":
+        scores_frame = cosineSimilarity(user, playlist)
     scores_frame.to_csv('./app/csv/scores.csv')
-    
-    
+
 # returns highest 5 scores
 def getScores(scores, run = True):
     if not run: return
+    print('res')
     scores = pandas.read_csv(scores)
     scores = scores.sort_values(by = 'score', ascending = False)
     scores.drop(columns = scores.columns[0], axis = 1, inplace= True)
@@ -59,3 +105,8 @@ def getScores(scores, run = True):
     res = scores['name'].values.tolist()[:5]
     print(res)
     return res
+
+
+def testScores(user, playlist):
+    scores_frame = cosineSimilarity(user, playlist)
+    scores_frame.to_csv('./csv/testScores.csv')

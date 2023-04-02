@@ -12,6 +12,8 @@ const InputSong = ({ setter }, { test }) => {
 
   const getSongs = async () => {
     try {
+      const elems = song.split("/");
+      setSong(elems[elems.length - 1]);
       const res = await axios.get(`/songs?song=${song}`);
       console.log(res);
       //console.log(res["data"]["songs"]);

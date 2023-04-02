@@ -5,7 +5,7 @@ import Songs from "./components/Songs.jsx";
 import { ChakraProvider, Heading, Stack, Box } from "@chakra-ui/react";
 
 function App() {
-  const [songs, setSongs] = useState(["Enter a Spotify Song ID"]);
+  const [songs, setSongs] = useState(["Enter a Spotify Song Link"]);
 
   useEffect(() => {
     console.log(songs);

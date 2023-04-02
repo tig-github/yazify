@@ -9,7 +9,8 @@ api = Flask(__name__)
 @api.route('/songs')
 def my_songs():
     print('Getting song scores')
-    song_id = request.args.get('song')
+    query_song = request.args.get('song')
+    song_id = query_song.split('/')[-1]
     songs = getRecommendations(song_id)
     response_body = {
         "songs": songs,

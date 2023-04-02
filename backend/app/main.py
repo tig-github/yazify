@@ -2,7 +2,7 @@ import requests
 import os
 from secret import client_id, client_secret
 from scrape import scrapePlaylist
-from score import scoreSimilarity, getScores
+from score import scoreSimilarity, getScores, testScores
 from explore import *
 from process import *
 
@@ -38,12 +38,15 @@ def getRecommendations(song_id):
         processPlaylist(headers, playlist_response, run = True)
     headers = setup()
     processUser(headers, id = song_id, run = True)
-    scoreSimilarity('./app/csv/user.csv', './app/csv/dataframe.csv', run = True)
+    scoreSimilarity('./app/csv/user.csv', './app/csv/dataframe.csv', metric = "cosine", run = True)
     scores = getScores('./app/csv/scores.csv', run = True)
     return scores
     
 
 if __name__ == '__main__':
+    testScores('./csv/user.csv', './csv/dataframe.csv')
+    # scoreSimilarity('./csv/user.csv', './csv/dataframe.csv', run = True)
+    # getScores('./csv/scores.csv', run = True)
     pass
     # playlist_response = scrapePlaylist(headers, run = False, save = False)
     # exploreTracks(headers, id = '4FyesJzVpA39hbYvcseO2d?si=6007e7e8fd4e4b89', run = False)
