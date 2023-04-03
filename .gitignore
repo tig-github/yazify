@@ -1,6 +1,6 @@
-src/secret.py
-src/txt
-src/csv
+/backend/app/secret.py
+/backend/app/txt
+/backend/app/csv
 __pycache__
 backend/env
 backend/__pycache__
