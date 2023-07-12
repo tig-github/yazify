@@ -1,6 +1,9 @@
 # test file just to explore structure of json objects returned by spotify api
 import requests
-
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.pyplot import figure
+from collections import OrderedDict
 
 # explores general information from a track
 def exploreTracks(headers, id = '', run = True):
@@ -57,3 +60,12 @@ def explorePlaylist(headers, id = '', run = True):
                 f.write('\n')
             except TypeError:
                 continue
+            
+    # plots releases in numpy        
+def plotReleases(releases):
+    releases = OrderedDict(sorted(releases.items()))
+    figure(figsize=(8, 6), dpi=35)
+    plt.bar(releases.keys(), releases.values(), 10, color='g', align="center")
+    plt.show()
+    plt.savefig('releases.pdf')  
+    print(releases)

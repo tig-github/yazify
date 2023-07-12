@@ -126,3 +126,19 @@ def processPlaylist(headers, res, run = True):
         except requests.exceptions.MissingSchema:
             break #finished scraping playlist
     playlist_frame.to_csv('./app/csv/dataframe.csv')
+    
+    
+# gather how many songs were released each year
+def processReleases(playlist):
+    playlist_df = pandas.read_csv(playlist)
+    releases = {}
+
+    for song in playlist_df['release']:
+        year = song[:4]
+        if year in releases:
+            releases[year] += 1
+        else:
+            releases[year] = 1
+    return releases  
+    #release_frame = pandas.DataFrame.from_dict(releases)
+    #release_frame.to_csv('./csv/releases.csv')

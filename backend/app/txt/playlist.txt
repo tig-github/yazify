@@ -66,7 +66,7 @@
 65 : Skateboard
 66 : Just the Same
 67 : Mary
-68 : Cantaloupe Island - Remastered
+68 : Cantaloupe Island - Remastered 1999/Rudy Van Gelder Edition
 69 : Blue Train - Remastered 2003/Rudy Van Gelder Edition
 70 : Iron Man - 2012 - Remaster
 71 : Ain't No Mountain High Enough - Mono
@@ -99,7 +99,7 @@
 98 : A Martyr for My Love for You
 99 : The Story In Your Eyes
 100 : One Short Tale: Peace
-101 : Moanin' - Remastered
+101 : Moanin' - Remastered 1998/Rudy Van Gelder Edition
 102 : Song For My Father
 103 : Sway
 104 : Mystic Brew
@@ -2065,7 +2065,7 @@
 2064 : Burfi
 2065 : Still Counting
 2066 : EARFQUAKE - Channel Tres Remix
-2067 : Dancing In The Street - Stereo
+2067 : Dancing In The Street
 2068 : Edition
 2069 : Uno
 2070 : big fat mouth
@@ -2284,29 +2284,29 @@
 2283 : When Gloves Come Off (feat. Ryan Beatty)
 2284 : Ex Bitch
 2285 : Triumph
-2286 : LIMBO
-2287 : Ecstasy
+2286 : LIMBO (feat. Killstation)
+2287 : Ecstasy (feat. Noah Cyrus)
 2288 : introduction
 2289 : UGLY
-2290 : bad vibes forever
-2291 : School Shooters
-2292 : I Changed Her Life
+2290 : bad vibes forever (feat. PnB Rock & Trippie Redd)
+2291 : School Shooters (feat. Lil Wayne)
+2292 : I Changed Her Life (feat. Rick Ross)
 2293 : before i realize
-2294 : Kill My Vibe
-2295 : Hot Gyal
+2294 : Kill My Vibe (feat. Tom G)
+2295 : Hot Gyal (feat. Tory Lanez & Mavado)
 2296 : THE ONLY TIME I FEEL ALIVE
 2297 : the interlude that never ends
-2298 : Daemons
+2298 : Daemons (feat. Joey Bada$$)
 2299 : ATTENTION!
 2300 : Eat It Up
-2301 : Voss
-2302 : Royalty
-2303 : wanna grow old (i won't let go)
+2301 : Voss (feat. Sauce Walka & Carnage)
+2302 : Royalty (feat. Ky-Mani Marley, Stefflon Don & Vybz Kartel)
+2303 : wanna grow old (i won't let go) (feat. Jimmy Levy)
 2304 : HEARTEATER
-2305 : NorthStar - Remix
-2306 : CHASE / glass shards
+2305 : NorthStar (feat. Joyner Lucas) - Remix
+2306 : CHASE / glass shards (feat. ikabodVEINS)
 2307 : numb the pain
-2308 : IT'S ALL FADING TO BLACK
+2308 : IT'S ALL FADING TO BLACK (feat. blink-182)
 2309 : I Ain't No Joke
 2310 : Do What I Want
 2311 : Of Course We Ghetto Flowers (feat. Playboi Carti & Offset)
@@ -2813,7 +2813,7 @@
 2812 : The Kicker - Rudy Van Gelder Edition/1999 Digital Remaster
 2813 : Lonely Woman - Remastered 1999/Rudy Van Gelder Edition
 2814 : Sanctimonious Sam - Rudy Van Gelder Edition/1999 Digital Remaster
-2815 : Que Pasa - Trio Version; Rudy Van Gelder Edition; 1999 Remaster
+2815 : Que Pasa - Remastered 1999/Rudy Van Gelder Edition
 2816 : Sighin' And Cryin' - Rudy Van Gelder Edition/1999 Digital Remaster
 2817 : Silver Treads Among The Soul - Rudy Van Gelder Edition/1999 Digital Remaster
 2818 : When I Was Your Man
@@ -3068,7 +3068,7 @@
 3067 : Sk8 Head
 3068 : Free Jazz - Pts. 1 & 2
 3069 : First Take
-3070 : Heaven Or Hell
+3070 : Heaven or Hell
 3071 : Euphoria (feat. Travis Scott & Kaash Paige)
 3072 : Cardigan
 3073 : After Party
@@ -5036,7 +5036,7 @@
 5035 : help_urself
 5036 : WHEN YOU FEEL SAD
 5037 : LONG SLEEP
-5038 : THINGS DON'T WANNA KNOW (feat. mingginyu)
+5038 : THINGS DON'T WANNA KNOW (feat. Mingginyu)
 5039 : CAN I PLUCK
 5040 : DIVE
 5041 : i never needed you
@@ -6119,7 +6119,7 @@
 6118 : Real Sisters
 6119 : Kno The Meaning
 6120 : F*ck Up Some Commas
-6121 : Like I Never Left (feat. Diddy & Ludacris, feat. Pharrell, Pusha T & Casino)
+6121 : Like I Never Left (feat. Diddy, Ludacris, Pharrell, Pusha T & Casino)
 6122 : RAINCLOUDS
 6123 : Divine Failure
 6124 : Beef
@@ -7026,7 +7026,7 @@
 7025 : Instant Crush (feat. Julian Casablancas)
 7026 : Lose Yourself to Dance (feat. Pharrell Williams)
 7027 : Touch (feat. Paul Williams)
-7028 : Get Lucky (feat. Pharrell Williams & Nile Rodgers)
+7028 : Get Lucky (feat. Pharrell Williams and Nile Rodgers)
 7029 : Beyond
 7030 : Motherboard
 7031 : Fragments of Time (feat. Todd Edwards)
@@ -7222,7 +7222,7 @@
 7221 : 21 Questions
 7222 : Don't Push Me
 7223 : Gotta Make It To Heaven
-7224 : Wanksta - From "8 Mile" Soundtrack
+7224 : Wanksta
 7225 : U Not Like Me
 7226 : Lifes On The Line
 7227 : Tëslas & Rovers
@@ -7763,7 +7763,7 @@
 7762 : Mysëlf
 7763 : LoveSickness
 7764 : Let Her Go (feat. James Blake)
-7765 : Leave The Club (feat. Lil Durk & GloRilla)
+7765 : Leave the Club (feat. Lil Durk & GloRilla)
 7766 : 4 Me (feat. Kali Uchis)
 7767 : Go Down (feat. TisaKorean)
 7768 : Time Heals All
@@ -8038,15 +8038,383 @@
 8037 : The Skin i Live In
 8038 : CRYO
 8039 : Me, Forever
-8040 : Bamboleo
-8041 : Tu Quieres Volver
-8042 : Moorea
-8043 : Bem, Bem, Maria
-8044 : Un Amor
-8045 : Inspiration
-8046 : A Mi Manera
-8047 : Djobi Djoba
-8048 : Faena
-8049 : Quiero Saber
-8050 : Amor, Amor
-8051 : Duende
+8040 : giftbag
+8041 : Bamboleo
+8042 : Tu Quieres Volver
+8043 : Moorea
+8044 : Bem, Bem, Maria
+8045 : Un Amor
+8046 : Inspiration
+8047 : A Mi Manera
+8048 : Djobi Djoba
+8049 : Faena
+8050 : Quiero Saber
+8051 : Amor, Amor
+8052 : Duende
+8053 : Enter Hallownest
+8054 : Dirtmouth
+8055 : Crossroads
+8056 : False Knight
+8057 : Greenpath
+8058 : Hornet
+8059 : Reflection
+8060 : Mantis Lords
+8061 : City of Tears
+8062 : Dung Defender
+8063 : Crystal Peak
+8064 : Fungal Wastes
+8065 : Decisive Battle
+8066 : Soul Sanctum
+8067 : Resting Grounds
+8068 : Queen's Gardens
+8069 : The White Lady
+8070 : Broken Vessel
+8071 : Kingdom's Edge
+8072 : Nosk
+8073 : Dream
+8074 : Dream Battle
+8075 : White Palace
+8076 : Sealed Vessel
+8077 : Radiance
+8078 : Hollow Knight
+8079 : Ghost Town
+8080 : Drippin
+8081 : Ballin' (feat. Ketchy the Great)
+8082 : If I Wasn't Rapping
+8083 : Bacc To Bacc (feat. Yhung T.O.)
+8084 : Baytoven
+8085 : Beat That Thing Down (feat. PnB Rock)
+8086 : Run For Yo Life
+8087 : Look At Me Now
+8088 : Voodoo
+8089 : 100 Bands (feat. OMB Peezy)
+8090 : Paranoid Pt. 03 (feat. Bambino)
+8091 : Vulture (feat. Ketchy the Great)
+8092 : Chase (feat. Ketchy the Great & Doley Bernays)
+8093 : White Owl (feat. Ketchy the Great)
+8094 : Safety (feat. Ralfy the Plug)
+8095 : For My Dawgs
+8096 : Pop It
+8097 : Substance
+8098 : Rude
+8099 : Zoning
+8100 : Never Bend
+8101 : Sweet Fruit
+8102 : Forgot Again
+8103 : The Not Real Lake
+8104 : A Long Slow Little Wave / Citizen, an Activity
+8105 : She Refused to Say
+8106 : Bowlly Goes Dancing Drunk into the Future
+8107 : Where Everybody Goes
+8108 : EL MUNDO ES MÍO
+8109 : TE MUDASTE
+8110 : HOY COBRÉ
+8111 : MALDITA POBREZA
+8112 : LA NOCHE DE ANOCHE
+8113 : TE DESEO LO MEJOR
+8114 : YO VISTO ASÍ
+8115 : HACIENDO QUE ME AMAS
+8116 : BOOKER T
+8117 : LA DROGA
+8118 : DÁKITI
+8119 : TRELLAS
+8120 : SORRY PAPI
+8121 : 120
+8122 : ANTES QUE SE ACABE
+8123 : CANTARES DE NAVIDAD
+8124 : Survival
+8125 : Nonstop
+8126 : Elevate
+8127 : Emotionless
+8128 : God's Plan
+8129 : I'm Upset
+8130 : 8 Out Of 10
+8131 : Mob Ties
+8132 : Can’t Take A Joke
+8133 : Sandra’s Rose
+8134 : Talk Up (feat. Jay-Z)
+8135 : Is There More
+8136 : Peak
+8137 : Summer Games
+8138 : Jaded
+8139 : Nice For What
+8140 : Finesse
+8141 : Ratchet Happy Birthday
+8142 : That’s How You Feel
+8143 : Blue Tint
+8144 : In My Feelings
+8145 : Don’t Matter To Me (with Michael Jackson)
+8146 : After Dark (feat. Static Major & Ty Dolla $ign)
+8147 : Final Fantasy
+8148 : March 14
+8149 : The Library - Intro
+8150 : I.Crawl
+8151 : II. Worldstar
+8152 : Dial Up
+8153 : I. The Worst Guys
+8154 : II. Shadows
+8155 : III. Telegraph Ave. ("Oakland" by Lloyd)
+8156 : IV. Sweatpants
+8157 : 3005
+8158 : Playing Around Before the Party Starts
+8159 : I. The Party
+8160 : II. No Exit
+8161 : Death By Numbers
+8162 : I. Flight of the Navigator
+8163 : II. Zealots of Stockholm [Free Information]
+8164 : III. Urn
+8165 : I. Pink Toes
+8166 : II. Earth: The Oldest Computer (The Last Night)
+8167 : III. Life: The Biggest Troll [Andrew Auernheimer]
+8168 : Therapy Session
+8169 : Pelle Coat
+8170 : All My Life (feat. J. Cole)
+8171 : Never Again
+8172 : Put Em On Ice
+8173 : Big Dawg (feat. Chief Wuk)
+8174 : Never Imagined (feat. Future)
+8175 : Sad Songs
+8176 : Before Fajr
+8177 : War Bout It (feat. 21 Savage)
+8178 : You Got Em
+8179 : Grandson (feat. Kodak Black)
+8180 : 300 Urus
+8181 : Same Side (feat. Rob49)
+8182 : B12
+8183 : At This Point We Stuck
+8184 : Cross The Globe (feat. Juice WRLD)
+8185 : Dru Hill
+8186 : Belt2Ass
+8187 : Stand By Me (feat. Morgan Wallen)
+8188 : Moment of Truth
+8189 : Free Smoke
+8190 : No Long Talk
+8191 : Passionfruit
+8192 : Jorja Interlude
+8193 : Get It Together
+8194 : Madiba Riddim
+8195 : Blem
+8196 : 4422
+8197 : Gyalchester
+8198 : Skepta Interlude
+8199 : Portland
+8200 : Sacrifices
+8201 : Nothings Into Somethings
+8202 : Teenage Fever
+8203 : KMT
+8204 : Lose You
+8205 : Can't Have Everything
+8206 : Glow
+8207 : Since Way Back
+8208 : Fake Love
+8209 : Ice Melts
+8210 : Do Not Disturb
+8211 : PURE
+8212 : 4SUM+
+8213 : WE GOOD
+8214 : YE
+8215 : F A POST
+8216 : ON THE MOON
+8217 : BACKSEAT
+8218 : HAVOC
+8219 : WISH I COULD TELL YOU
+8220 : UNDERCOVER
+8221 : RC
+8222 : BEAUTIFUL ROCKSTAR - BONUS
+8223 : Who He Iz
+8224 : letstalkaboutit
+8225 : 4EVA
+8226 : Westside
+8227 : Master P
+8228 : Rebuke
+8229 : Sossaup
+8230 : STFU3
+8231 : UGH UGH
+8232 : EYE
+8233 : K&A
+8234 : back at it
+8235 : back to the moon
+8236 : idk nomore
+8237 : paybach
+8238 : ca$h $hit
+8239 : fukumean
+8240 : rodeo dr
+8241 : bottom
+8242 : p angels
+8243 : born rich
+8244 : go crazy
+8245 : bread & butter
+8246 : turned your back
+8247 : i was just thinking
+8248 : alright
+8249 : stuck
+8250 : giftbag
+8251 : black enuff
+8252 : f2g
+8253 : captain
+8254 : pwf
+8255 : Motor Spirit
+8256 : Supercell
+8257 : Converge
+8258 : Witchcraft
+8259 : Gila Monster
+8260 : Dragon
+8261 : Flamethrower
+8262 : Parade on Cleveland (feat. Drake)
+8263 : Money On The Dresser
+8264 : Gucci Grocery Bag
+8265 : Cars Bring Me Out (feat. Future)
+8266 : Wit Da Racks (feat. 21 Savage, Travis Scott & Yak Gotti)
+8267 : Uncle M
+8268 : Abracadabra (feat. Travis Scott)
+8269 : Went Thru It
+8270 : Oh U Went (feat. Drake)
+8271 : Want Me Dead (feat. 21 Savage)
+8272 : Hellcat Kenny (feat. Lil Uzi Vert)
+8273 : Mad Dog
+8274 : Jonesboro
+8275 : Hoodie (feat. BSlime & Lil Gotit)
+8276 : Global Access (feat. Nate Ruess)
+8277 : ROSA PASTEL
+8278 : LUNA
+8279 : 77
+8280 : RUBICON
+8281 : CARNAL
+8282 : GAVILÁN II
+8283 : VVS
+8284 : SU CASA
+8285 : LADY GAGA
+8286 : ZAPATA
+8287 : LA PEOPLE
+8288 : NUEVA VIDA
+8289 : LAGUNAS
+8290 : BYE
+8291 : Lust For Life
+8292 : Houstatlantavegas
+8293 : Successful (feat. Trey Songz & Lil Wayne)
+8294 : Let’s Call It Off (feat. Peter Bjorn and John)
+8295 : November 18th
+8296 : Ignant Shit (feat. Lil Wayne)
+8297 : A Night Off (feat. Lloyd)
+8298 : Say What's Real
+8299 : Little Bit (feat. Lykke Li)
+8300 : Unstoppable (feat. Santigold & Lil Wayne)
+8301 : Uptown (feat. Bun B & Lil Wayne)
+8302 : Sooner Than Later
+8303 : Bria's Interlude (feat. Omarion)
+8304 : The Calm
+8305 : Outro (feat. Chilly Gonzales)
+8306 : Brand New
+8307 : Congratulations
+8308 : Flooded The Face
+8309 : Suicide Doors
+8310 : Aye (feat. Travis Scott)
+8311 : Crush Em
+8312 : Amped
+8313 : x2
+8314 : Died and Came Back
+8315 : Spin Again
+8316 : That Fiya
+8317 : I Gotta
+8318 : Endless Fashion (feat. Nicki Minaj)
+8319 : Mama, I’m Sorry
+8320 : All Alone
+8321 : Nakamura
+8322 : Just Wanna Rock
+8323 : Fire Alarm (feat. Snow Strippers)
+8324 : CS
+8325 : Werewolf (feat. Bring Me The Horizon)
+8326 : Pluto to Mars
+8327 : Patience (feat. Don Toliver)
+8328 : Days Come and Go
+8329 : Rehab
+8330 : The End (feat. BABYMETAL)
+8331 : Zoom (Bonus Track)
+8332 : Of Course (Bonus Track)
+8333 : Shardai (Bonus Track)
+8334 : The Great McCarthy
+8335 : Black Point Boat Launch
+8336 : Stingray (feat. Benny The Butcher)
+8337 : Marcus Camby (feat. Jim Jones & Tommy Wright III)
+8338 : Marble Columns (feat. Larry June)
+8339 : Neon Skyline (feat. G.T.)
+8340 : '86 Testarossa (feat. Rome Streetz)
+8341 : The Warehouse
+8342 : Purple Picasso (feat. Vico)
+8343 : Tunevert
+8344 : No Bap
+8345 : Super Ski
+8346 : Gemini Love
+8347 : 2021 Vibes
+8348 : Mubu
+8349 : Almighty Tune
+8350 : Str8 Syrup
+8351 : Purple Heart Ski
+8352 : Karma A Bitch
+8353 : Pop Star
+8354 : Wholeworldslatt (feat. Veeze)
+8355 : Bby Pluto
+8356 : Chrome Denim
+8357 : New York
+8358 : Cuerno Azulado
+8359 : Diran De Mi
+8360 : Mas Altas Que Bajadas
+8361 : La Lokerona
+8362 : Un Convoy
+8363 : Pancake
+8364 : Viejo Lobo
+8365 : AFS
+8366 : Eres
+8367 : Mi Bello Angel
+8368 : En Corto
+8369 : AMG
+8370 : Como Es Arriba Es Abajo
+8371 : Pacas De Billetes
+8372 : Dando y Dando
+8373 : Ghini
+8374 : Biking
+8375 : the ends
+8376 : way back
+8377 : coordinate
+8378 : through the late night
+8379 : beibs in the trap
+8380 : sdp interlude
+8381 : sweet sweet
+8382 : outside
+8383 : goosebumps
+8384 : first take
+8385 : pick up the phone
+8386 : lose
+8387 : guidance
+8388 : wonderful
+8389 : Lean Beef Patty
+8390 : Steppa Pig
+8391 : SCARING THE HOES
+8392 : Garbage Pale Kids
+8393 : Fentanyl Tester
+8394 : Burfict!
+8395 : Shut Yo Bitch Ass Up / Muddy Waters
+8396 : Orange Juice Jones
+8397 : Kingdom Hearts Key (ft. redveil)
+8398 : God Loves You
+8399 : Run The Jewels
+8400 : Jack Harlow Combo Meal
+8401 : HOE (Heaven on Earth)
+8402 : Where Ya Get Ya Coke From?
+8403 : Guess What Bitch, We Back Hoe!
+8404 : HERMANOS
+8405 : Tell Me Where To Go
+8406 : NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO! NO!
+8407 : Let It Go
+8408 : Shabba (feat. A$AP Rocky)
+8409 : Lord (feat. Bone Thugs-n-Harmony)
+8410 : Hood Pope
+8411 : Fergivicious
+8412 : 4:02
+8413 : Dump Dump
+8414 : Work REMIX (feat. A$AP Rocky, French Montana, Trinidad James & ScHoolboy Q)
+8415 : Didn't Wanna Do That
+8416 : Murda Something (feat. Waka Flocka Flame)
+8417 : Make A Scene (feat. Maad Moiselle)
+8418 : F**k Out My Face (feat. B-Real, Onyx & Aston Matthews)
+8419 : Cocaine Castle

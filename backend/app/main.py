@@ -41,13 +41,21 @@ def getRecommendations(song_id):
     scoreSimilarity('./app/csv/user.csv', './app/csv/dataframe.csv', metric = "cosine", run = True)
     scores = getScores('./app/csv/scores.csv', run = True)
     return scores
-    
+
+# for exploring track data
+def explore():
+    headers = setup()
+    playlist_response = scrapePlaylist(headers, run = True, save = True)
+    processPlaylist(headers, playlist_response, run = True)
+    releases = processReleases('./csv/dataframe.csv')
+    plotReleases(releases)
+
 
 if __name__ == '__main__':
-    testScores('./csv/user.csv', './csv/dataframe.csv')
+    explore()
+    #testScores('./csv/user.csv', './csv/dataframe.csv')
     # scoreSimilarity('./csv/user.csv', './csv/dataframe.csv', run = True)
     # getScores('./csv/scores.csv', run = True)
-    pass
     # playlist_response = scrapePlaylist(headers, run = False, save = False)
     # exploreTracks(headers, id = '4FyesJzVpA39hbYvcseO2d?si=6007e7e8fd4e4b89', run = False)
     # exploreAudio(headers, id = '4FyesJzVpA39hbYvcseO2d?si=6007e7e8fd4e4b89', run = False)

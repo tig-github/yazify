@@ -76,8 +76,6 @@ def cosineSimilarity(user, playlist):
     return scores_frame
     
     
-    
-    
 # PCA scoring - more robust but will require some data manipulation
 def principleComponentAnalysis(user, playlist):
     user = pandas.read_csv(user)
