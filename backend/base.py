@@ -23,7 +23,6 @@ def refresh_songs():
     print('Updating song database')
     refresh()
     print('Finished updating the song database')
-    
 
 # if __name__ == '__main__':
 #     api.run(host="localhost", port=3000, debug=False)

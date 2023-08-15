@@ -24,11 +24,12 @@ function App() {
   const refresh = async () => {
     try {
       setSongs(["Updating song database..."]);
-      const res = await axios.get(`/refresh`);
-      console.log(res);
+      await axios.get(`/refresh`);
       setSongs(["Enter a Spotify Song Link"]);
+      console.log("Successful update");
     } catch (error) {
       console.log(error);
+      setSongs(["Enter a Spotify Song Link"]);
     }
   };
   const toast = useToast();
@@ -59,6 +60,7 @@ function App() {
                     "Updating song database - this might take some time!",
                   duration: 9000,
                   isClosable: true,
+                  status: "info",
                   colorScheme: "green",
 
                   variant: "subtle",
