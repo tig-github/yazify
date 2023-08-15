@@ -32,11 +32,11 @@ def setup():
 def getRecommendations(song_id):
     #is_scraped = os.path.isfile('./app/txt/index.json')
     is_scraped = True
+    headers = setup()
     if not is_scraped:
         #headers = setup()
         playlist_response = scrapePlaylist(headers, run = True, save = True)
         processPlaylist(headers, playlist_response, run = True)
-    headers = setup()
     processUser(headers, id = song_id, run = True)
     scoreSimilarity('./app/csv/user.csv', './app/csv/dataframe.csv', metric = "cosine", run = True)
     scores = getScores('./app/csv/scores.csv', run = True)
