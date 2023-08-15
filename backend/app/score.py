@@ -61,18 +61,11 @@ def cosineSimilarity(user, playlist):
     for _ in range(5):
         user = np.delete(user, 0, axis=1)
         playlist = np.delete(playlist, 0, axis=1)
-    print(user.size, playlist.size)
     user.reshape(-1)
-    print(user, playlist)
     # create scores by comparing each vector with cosine similarity metric
     for i in range(len(playlist)):
         similarity = cos_similarity(user, playlist[i]).T
         scores_frame.loc[i] = [playlist_df.loc[i]['name'], similarity[0]]
-        
-    # print(similarities)
-    #similarities = cos_similarity(user, playlist.T).T
-    # for i in range(len(similarities)):
-    #     scores_frame.loc[i] = [playlist_df.loc[i]['name'], similarities[i][0]]
     return scores_frame
     
 

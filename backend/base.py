@@ -2,7 +2,7 @@ from flask import Flask
 from flask import request
 import sys
 sys.path.append('./app')
-from app.main import getRecommendations
+from app.main import getRecommendations, refresh
 
 api = Flask(__name__)
 
@@ -16,8 +16,14 @@ def my_songs():
         "songs": songs,
     }
     print('Returning song scores')
-
     return response_body
+
+@api.route('/refresh')
+def refresh_songs():
+    print('Updating song database')
+    refresh()
+    print('Finished updating the song database')
+    
 
 # if __name__ == '__main__':
 #     api.run(host="localhost", port=3000, debug=False)
