@@ -33,7 +33,7 @@ def getRecommendations(song_id):
     headers = setup()
     processUser(headers, id = song_id, run = True)
     scoreSimilarity('./app/csv/user.csv', './app/csv/dataframe.csv', metric = "cosine", run = True)
-    scores = getScores('./app/csv/scores.csv', run = True)
+    scores = getScores(headers, './app/csv/scores.csv', run = True)
     return scores
 
 

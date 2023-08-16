@@ -1,6 +1,7 @@
 import pandas
 import numpy as np
 import math
+from utils import getArtist
 
 # brute force approach to scoring
 # simply calculate similarity weighting different features differently
@@ -54,6 +55,7 @@ def cosineSimilarity(user, playlist):
     playlist = playlist_df.to_numpy()
     scores = {
         'name' : [],
+        'artist': [],
         'score' : []
     }
     scores_frame = pandas.DataFrame(scores)
@@ -65,7 +67,7 @@ def cosineSimilarity(user, playlist):
     # create scores by comparing each vector with cosine similarity metric
     for i in range(len(playlist)):
         similarity = cos_similarity(user, playlist[i]).T
-        scores_frame.loc[i] = [playlist_df.loc[i]['name'], similarity[0]]
+        scores_frame.loc[i] = [playlist_df.loc[i]['name'], playlist_df.loc[i]['artist'], similarity[0]]
     return scores_frame
     
 
@@ -78,7 +80,7 @@ def scoreSimilarity(user, playlist, metric="cosine", run = True):
     scores_frame.to_csv('./app/csv/scores.csv')
 
 # returns highest 5 scores
-def getScores(scores, run = True):
+def getScores(headers, scores, run = True):
     if not run: return
     print('res')
     scores = pandas.read_csv(scores)
@@ -86,8 +88,12 @@ def getScores(scores, run = True):
     scores.drop(columns = scores.columns[0], axis = 1, inplace= True)
     scores.to_csv('./app/csv/sorted.csv')
     print(scores)
-    res = scores['name'].values.tolist()[:5]
-    print(res)
+    res_name = scores['name'].values.tolist()[:5]
+    res_artist = [getArtist(headers, id) for id in scores['artist'].values.tolist()[:5]]
+    
+    res = []
+    for i in range(5):
+        res.append(f'{res_name[i]} - {res_artist[i]}')
     return res
 
 

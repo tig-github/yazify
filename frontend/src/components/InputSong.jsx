@@ -18,6 +18,7 @@ const InputSong = ({ setter }, { test }) => {
       setter(res["data"]["songs"]);
     } catch (error) {
       console.log(error);
+      setter(["Error - request for recommendations failed."]);
     }
   };
 
