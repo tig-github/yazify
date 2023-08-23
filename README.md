@@ -19,3 +19,4 @@ simple song recommender using spotify api
 5. scrape all/more curated playlists
 6. use database to store all scraped songs
 7. build cache to store songs that already have been scored
+8. more robust recommendation system using user data (allowing other product-centric options for users that do not login)
