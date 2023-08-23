@@ -8772,12 +8772,24 @@
 8771 : Plano de Voo
 8772 : Duas de Cinco
 8773 : Fio de Pumo (Padê Onã)
-8774 : Intro
-8775 : Abre Caminho
-8776 : En Tu Mira
-8777 : Esú
-8778 : Capitães de Areia
-8779 : Senhor do Bomfim
-8780 : A Pele Que Habito
-8781 : Te Amo Disgraça
-8782 : Imortais e Fatais
+8774 : 油
+8775 : 犬姫 (12D ver.)
+8776 : 夜啼鶯
+8777 : MYSTERIOUS
+8778 : KING BITCH
+8779 : バイオレンス
+8780 : 杜若
+8781 : 回春
+8782 : 堕天
+8783 : ハイになんてなりたくない
+8784 : 長台詞
+8785 : 十二次元
+8786 : Intro
+8787 : Abre Caminho
+8788 : En Tu Mira
+8789 : Esú
+8790 : Capitães de Areia
+8791 : Senhor do Bomfim
+8792 : A Pele Que Habito
+8793 : Te Amo Disgraça
+8794 : Imortais e Fatais

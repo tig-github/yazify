@@ -7,7 +7,6 @@ import json
 def getArtist(headers, id):
     res = requests.get(f'https://api.spotify.com/v1/artists/{id}', headers=headers)
     res = res.json()
-    print('!!!!!!!!!!!!!!!!1', res)
     if 'name' not in res:
         return id 
     else:

@@ -45,10 +45,10 @@ def refresh():
 
 # for exploring track data
 def explore():
-    headers = setup()
-    playlist_response = scrapePlaylist(headers, run = True, save = True)
-    processPlaylist(headers, playlist_response, run = True)
-    releases = processReleases('./csv/dataframe.csv')
+    #headers = setup()
+    #playlist_response = scrapePlaylist(headers, run = True, save = False)
+    #processPlaylist(headers, playlist_response, run = True)
+    releases = processReleases('./app/csv/dataframe.csv')
     plotReleases(releases)
 
 

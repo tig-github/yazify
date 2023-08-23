@@ -1,6 +1,7 @@
 /backend/app/secret.py
 /backend/app/txt
-/backend/app/csv
+/backend/csv
+backend/app/csv
 __pycache__
 backend/env
 backend/__pycache__

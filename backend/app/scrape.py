@@ -1,6 +1,14 @@
 import requests
 import json
-import os
+
+# initially all data was saved in csvs and processed as pandas df for simplicity
+# to enable scraping many playlists better hosting a database solution will be necessary
+# the speed bottleneck is saving/reading pandas df, not the tens of thousands of matrix multiplications
+# if a more advance scoring metric takes too long, future solutions may be necessary
+# all songs that have ever been scored should be CACHED to allow near instant load times
+# for any user that searches that song - I LOVE CACHES
+
+
 
 def scrapePlaylist(headers, id = '2ttf8zNG34K5SSdZRzqhVR?si=574666c4176c41d0', run = True, save = True):
     if not run: return
