@@ -36,3 +36,7 @@ def scrapePlaylist(headers, id = '2ttf8zNG34K5SSdZRzqhVR?si=574666c4176c41d0', r
         if save: json.dump(index, f)
     return res
 
+
+# scrape the playlists used to build the database
+def scrapeDatabase():
+    pass
