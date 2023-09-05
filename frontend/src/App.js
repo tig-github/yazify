@@ -1,24 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Data } from "./utils.js";
 import axios from "axios";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Recommend from "./pages/Recommend.jsx";
 import Visualize from "./pages/Visualize.jsx";
+import Recommend from "./pages/Recommend.jsx";
 
 function App() {
-  const [userData, setUserData] = useState({
-    labels: Data.map((d) => d.year),
-    datasets: [
-      {
-        label: "Users Gained",
-        data: Data.map((d) => d.userGain),
-        backgroundColor: ["green"],
-      },
-    ],
-  });
-
   // useEffect(() => {
   //   console.log(songs);
   // }, [songs]);

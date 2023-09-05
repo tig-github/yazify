@@ -4,11 +4,15 @@ import {
   Stack,
   Box,
   Flex,
-  IconButton,
+  Button,
+  ButtonGroup,
+  Link,
   useToast,
 } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 import { Data } from "../utils.js";
 import PieChart from "../components/PieChart.jsx";
+import BarChart from "../components/BarChart.jsx";
 import axios from "axios";
 
 const Visualize = () => {
@@ -22,6 +26,7 @@ const Visualize = () => {
       },
     ],
   });
+
   return (
     <>
       <Box bg="black" w="100%" h="100%">
@@ -29,8 +34,23 @@ const Visualize = () => {
           <Heading as="h1" color="Green" fontSize="6xl" mt="3.5rem" mb="4rem">
             Yazify
           </Heading>
+          <Flex>
+            <ButtonGroup>
+              <Link as={RouterLink} to="/">
+                <Button backgroundColor="#228B22" color="black" size="lg">
+                  Recommendations
+                </Button>
+              </Link>
+              <Link as={RouterLink} to="/chart">
+                <Button backgroundColor="#228B22" color="black" size="lg">
+                  Visualize
+                </Button>
+              </Link>
+            </ButtonGroup>
+          </Flex>
+
           <Box w="45%" h="45%">
-            <PieChart chartData={userData} />
+            <BarChart chartData={userData} />
           </Box>
         </Stack>
       </Box>

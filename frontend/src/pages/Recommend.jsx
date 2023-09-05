@@ -7,12 +7,16 @@ import {
   Box,
   Flex,
   IconButton,
+  Button,
+  ButtonGroup,
+  Link,
   useToast,
 } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 import { RepeatIcon } from "@chakra-ui/icons";
 import axios from "axios";
 
-const Visualize = () => {
+const Recommend = () => {
   const [songs, setSongs] = useState(["Enter a Spotify Song Link"]);
   // dev function to refresh database, will later be set in stone
   const refresh = async () => {
@@ -27,6 +31,7 @@ const Visualize = () => {
     }
   };
   const toast = useToast();
+
   return (
     <>
       <Box bg="black" w="100%" h="calc(100vh)">
@@ -34,6 +39,20 @@ const Visualize = () => {
           <Heading as="h1" color="Green" fontSize="6xl" mt="3.5rem" mb="4rem">
             Yazify
           </Heading>
+          <Flex>
+            <ButtonGroup>
+              <Link as={RouterLink} to="/">
+                <Button backgroundColor="#228B22" color="black" size="lg">
+                  Recommendations
+                </Button>
+              </Link>
+              <Link as={RouterLink} to="/chart">
+                <Button backgroundColor="#228B22" color="black" size="lg">
+                  Visualize
+                </Button>
+              </Link>
+            </ButtonGroup>
+          </Flex>
 
           <Flex>
             <InputSong setter={setSongs} test={songs} />
@@ -69,4 +88,4 @@ const Visualize = () => {
   );
 };
 
-export default Visualize;
+export default Recommend;
