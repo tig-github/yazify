@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import InputSong from "./components/InputSong.jsx";
 import Songs from "./components/Songs.jsx";
+import PieChart from "./components/PieChart.jsx";
 import {
   ChakraProvider,
   Heading,
@@ -12,15 +13,28 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { RepeatIcon } from "@chakra-ui/icons";
+import { Data } from "./utils.js";
 import axios from "axios";
 
 function App() {
   const [songs, setSongs] = useState(["Enter a Spotify Song Link"]);
 
-  useEffect(() => {
-    console.log(songs);
-  }, [songs]);
+  const [userData, setUserData] = useState({
+    labels: Data.map((d) => d.year),
+    datasets: [
+      {
+        label: "Users Gained",
+        data: Data.map((d) => d.userGain),
+        backgroundColor: ["green"],
+      },
+    ],
+  });
 
+  // useEffect(() => {
+  //   console.log(songs);
+  // }, [songs]);
+
+  // dev function to refresh database, will later be set in stone
   const refresh = async () => {
     try {
       setSongs(["Updating song database..."]);
@@ -36,7 +50,7 @@ function App() {
 
   return (
     <ChakraProvider>
-      <Box bg="black" w="100%" h="calc(100vh)">
+      <Box bg="black" w="100%" h="100%">
         <Stack spacing="2rem" align="center">
           <Heading as="h1" color="Green" fontSize="6xl" mt="3.5rem" mb="4rem">
             Yazify
@@ -69,6 +83,9 @@ function App() {
             />
           </Flex>
           {songs && <Songs songs={songs} />}
+          <Box w="60%" h="100%">
+            <PieChart chartData={userData} />
+          </Box>
         </Stack>
       </Box>
     </ChakraProvider>
