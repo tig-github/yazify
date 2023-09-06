@@ -37,6 +37,21 @@ def getRecommendations(song_id):
     return scores
 
 
+# returns release data for charts
+def getChartData(playlist_id, key):
+    headers = setup()
+    playlist_response = scrapePlaylist(headers, id = playlist_id, run = True, save = True)
+    playlist_df = processPlaylist(headers, playlist_response, save = False)
+    if key == 'releases':
+        data = processReleases(playlist_df)
+    elif key == 'albums':
+        data = processAlbums(playlist_df)
+    elif key == 'artists':
+        data = processArtists(playlist_df)
+    print(data)
+    return data
+    
+
 # refreshes the representative playlist for updates
 def refresh():
     headers = setup()
@@ -53,8 +68,9 @@ def explore():
 
 
 if __name__ == '__main__':
-    explore()
-    #testScores('./csv/user.csv', './csv/dataframe.csv')
+    pass
+    # explore()
+    # testScores('./csv/user.csv', './csv/dataframe.csv')
     # scoreSimilarity('./csv/user.csv', './csv/dataframe.csv', run = True)
     # getScores('./csv/scores.csv', run = True)
     # playlist_response = scrapePlaylist(headers, run = False, save = False)

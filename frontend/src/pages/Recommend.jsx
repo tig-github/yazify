@@ -43,7 +43,7 @@ const Recommend = () => {
             <ButtonGroup>
               <Link as={RouterLink} to="/">
                 <Button backgroundColor="#228B22" color="black" size="lg">
-                  Recommendations
+                  Recommend
                 </Button>
               </Link>
               <Link as={RouterLink} to="/chart">

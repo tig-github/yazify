@@ -42,6 +42,7 @@ def processTrackBatch(headers, playlist_frame, ids, run = True):
 
     track_batch1 = requests.get(f'https://api.spotify.com/v1/tracks?ids={ids1}', headers=headers)
     audio_batch1 = requests.get(f'https://api.spotify.com/v1/audio-features?ids={ids1}', headers=headers)
+    print(track_batch1, audio_batch1)
     prev_length = len(playlist_frame)
     for i in range(min(len(audio_batch1.json()['audio_features']), len(track_batch1.json()['tracks']))):
         if not audio_batch1.json()['audio_features'][i]:
@@ -49,9 +50,10 @@ def processTrackBatch(headers, playlist_frame, ids, run = True):
         processed_tracks1 = processTrack(track_batch1.json()['tracks'][i], audio_batch1.json()['audio_features'][i])
         playlist_frame.loc[i+prev_length] = processed_tracks1
 
-    if not ids2: return
+    if not ids2: return playlist_frame
     track_batch2 = requests.get(f'https://api.spotify.com/v1/tracks?ids={ids2}', headers=headers)
     audio_batch2 = requests.get(f'https://api.spotify.com/v1/audio-features?ids={ids1}', headers=headers)
+    print(track_batch2, audio_batch2)
 
     prev_length = len(playlist_frame)
     for i in range(min(len(audio_batch2.json()['audio_features']), len(track_batch2.json()['tracks']))):
@@ -96,7 +98,7 @@ def processUser(headers, id, run = True):
 
 
 # processes playlist data into csv
-def processPlaylist(headers, res, run = True):
+def processPlaylist(headers, res, save = True, run = True):
     if not run: return
 
     playlist = res.json()['tracks']
@@ -121,18 +123,21 @@ def processPlaylist(headers, res, run = True):
     while playlist:
         ids = [track['track']['id'] for track in playlist['items']]
         playlist_frame = processTrackBatch(headers, playlist_frame, ids)
+        print(playlist_frame)
+        #sleep(30)
         try:
             playlist = requests.get(playlist['next'], headers=headers).json()
         except requests.exceptions.MissingSchema:
             break #finished scraping playlist
-    playlist_frame.to_csv('./app/csv/dataframe.csv')
+    if save: playlist_frame.to_csv('./app/csv/dataframe.csv')
+    return playlist_frame
     
     
 # gather how many songs were released each year
-def processReleases(playlist):
-    playlist_df = pandas.read_csv(playlist)
+# takes in dataframe
+def processReleases(playlist_df):
+    #playlist_df = pandas.read_csv(playlist_df)
     releases = {}
-
     for song in playlist_df['release']:
         year = song[:4]
         if year in releases:
@@ -140,5 +145,25 @@ def processReleases(playlist):
         else:
             releases[year] = 1
     return releases  
-    #release_frame = pandas.DataFrame.from_dict(releases)
-    #release_frame.to_csv('./csv/releases.csv')
+    
+    
+# gathers all artists and how many songs they have in the playlist
+def processArtists(playlist_df):
+    releases = {}
+    for artist in playlist_df['artist']:
+        if artist in releases:
+            releases[artist] += 1
+        else:
+            releases[artist] = 1
+    return releases  
+
+
+# gathers all albums and how many songs they have in the playlist
+def processAlbums(playlist_df):
+    releases = {}
+    for album in playlist_df['album']:
+        if album in releases:
+            releases[album] += 1
+        else:
+            releases[album] = 1
+    return releases  

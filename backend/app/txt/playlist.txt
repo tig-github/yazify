@@ -2513,8 +2513,8 @@
 2512 : Buggin' Out
 2513 : Rap Promoter
 2514 : Butter
-2515 : Verses from the Abstract
-2516 : Show Business
+2515 : Verses from the Abstract (feat. Vinia Mojica & Ron Carter)
+2516 : Show Business (feat. Diamond D, Lord Jamar & Sadat X)
 2517 : Vibes and Stuff
 2518 : Infamous Date Rape
 2519 : Check the Rhime
@@ -2522,7 +2522,7 @@
 2521 : Jazz (We've Got)
 2522 : Skypager
 2523 : What?
-2524 : Scenario - LP Mix
+2524 : Scenario (feat. Busta Rhymes, Dinco D & Charlie Brown) - LP Mix
 2525 : BEST INTEREST
 2526 : Circles
 2527 : Complicated
@@ -2775,20 +2775,20 @@
 2774 : Last Call
 2775 : The Space Program
 2776 : We The People....
-2777 : Whateva Will Be
-2778 : Solid Wall of Sound
-2779 : Dis Generation
-2780 : Kids...
-2781 : Melatonin
+2777 : Whateva Will Be (feat. Consequence)
+2778 : Solid Wall of Sound (feat. Busta Rhymes, Jack White & Elton John)
+2779 : Dis Generation (feat. Busta Rhymes)
+2780 : Kids... (feat. Andre 3000)
+2781 : Melatonin (feat. Marsha Ambrosius & Yebba)
 2782 : Enough!!
-2783 : Mobius
-2784 : Black Spasmodic
-2785 : The Killing Season
-2786 : Lost Somebody
-2787 : Movin Backwards
-2788 : Conrad Tokyo
+2783 : Mobius (feat. Busta Rhymes & Consequence)
+2784 : Black Spasmodic (feat. Consequence)
+2785 : The Killing Season (feat. Kanye West, Consequence & Talib Kweli)
+2786 : Lost Somebody (feat. Katia Cadet)
+2787 : Movin Backwards (feat. Anderson .Paak)
+2788 : Conrad Tokyo (feat. Kendrick Lamar & Jack White)
 2789 : Ego
-2790 : The Donald
+2790 : The Donald (feat. Busta Rhymes & Cadet)
 2791 : Intro
 2792 : KOD
 2793 : Photograph
@@ -3537,15 +3537,15 @@
 3536 : F33l Lik3 Dyin
 3537 : Midnight Marauders Tour Guide
 3538 : Steve Biko (Stir It Up)
-3539 : Award Tour
+3539 : Award Tour (feat. Trugoy The Dove)
 3540 : 8 Million Stories
 3541 : Sucka Nigga
-3542 : Midnight
+3542 : Midnight (feat. Raphael Saadiq)
 3543 : We Can Get Down
 3544 : Electric Relaxation
 3545 : Clap Your Hands
-3546 : Oh My God
-3547 : Keep It Rollin'
+3546 : Oh My God (feat. Busta Rhymes)
+3547 : Keep It Rollin' (feat. Large Professor)
 3548 : The Chase, Part II
 3549 : Lyrics to Go
 3550 : God Lives Through
@@ -3970,7 +3970,7 @@
 3969 : God is in the Rhythm
 3970 : Lonely Steel Sheet Flyer
 3971 : SugarCrash!
-3972 : Gravity (feat. Tyler, The Creator)
+3972 : GRAVITY (FEAT. TYLER, THE CREATOR)
 3973 : K.G.L.W.
 3974 : Automation
 3975 : Minimum Brain Size
@@ -4195,7 +4195,7 @@
 4194 : Superstar (feat. Future)
 4195 : Came Out (feat. Lil Keed)
 4196 : Really Be Slime (feat. YNW Melly, Bslime & FN DaDealer)
-4197 : Take It To Trial (feat. Yak Gotti)
+4197 : Take It to Trial (feat. Yak Gotti)
 4198 : Trance (feat. Karlae & Yung Bleu)
 4199 : GFU (feat. Yung Kayo)
 4200 : Moon Man (feat. Strick & Kid Cudi)
@@ -8793,3 +8793,138 @@
 8792 : A Pele Que Habito
 8793 : Te Amo Disgraça
 8794 : Imortais e Fatais
+8795 : The Chronic (Intro)
+8796 : Fuck Wit Dre Day (And Everybody's Celebratin')
+8797 : Let Me Ride
+8798 : The Day The Niggaz Took Over
+8799 : Nuthin' But A "G" Thang
+8800 : Deeez Nuuuts
+8801 : Lil' Ghetto Boy
+8802 : A Nigga Witta Gun
+8803 : Rat-Tat-Tat-Tat
+8804 : The $20 Sack Pyramid
+8805 : Lyrical Gangbang
+8806 : High Powered
+8807 : The Doctor's Office
+8808 : Stranded On Death Row
+8809 : The Roach (The Chronic Outro)
+8810 : Bitches Ain't Shit
+8811 : Bubble
+8812 : ﻿Not Like You
+8813 : ﻿I Wanna Do
+8814 : ﻿Be Mine
+8815 : ﻿Bubble (English Ver.)
+8816 : ﻿Bubble (Sped Up) (English Ver.)
+8817 : Stunner
+8818 : Blank Chems
+8819 : Intercepted Message
+8820 : Die Laughing
+8821 : Unusual & Cruel
+8822 : The Fish Needs A Bike
+8823 : Goon
+8824 : Chaos Heart
+8825 : Submerged Building
+8826 : Sleazoid Psycho
+8827 : Always At Night
+8828 : LADWP Hold
+8829 : Fueled Up
+8830 : Patty Cake (feat. Takeoff)
+8831 : Mama Told Me
+8832 : Who Wit Me
+8833 : Narkedo Speaks
+8834 : Hold Me
+8835 : Where Can I Start
+8836 : Wall To Wall
+8837 : Turn Yo Clic Up (feat. Future)
+8838 : Back Where It Begins (feat. Future and Takeoff)
+8839 : 11.11
+8840 : Galaxy
+8841 : Disciples
+8842 : Focused (feat. Young Thug)
+8843 : Stain (feat. Hunxho and BabyDrill)
+8844 : Not Done Yet
+8845 : Rocket Power
+8846 : Greatness
+8847 : ME CAMBIASTE (with Eslabon Armado)
+8848 : Vessel
+8849 : Offline
+8850 : Casanova
+8851 : Intergalactic - Solo Version
+8852 : Star Death
+8853 : Twilight Hill
+8854 : You F O
+8855 : Back Again
+8856 : Fake Friends
+8857 : Top Ramen
+8858 : Love Doesn't Bite
+8859 : Mr. Shooter
+8860 : Bicycle Boy
+8861 : Galaxy Hearts
+8862 : Skyline
+8863 : Clouded
+8864 : Been Away
+8865 : Fuck The World (Summer in London)
+8866 : Let Me Know
+8867 : Soon Az I Get Home
+8868 : Rehab (Winter In Paris)
+8869 : Bluffin
+8870 : Lost Kids Get Money
+8871 : Make It Out
+8872 : GURUGURU
+8873 : Hypernova Disco
+8874 : Milkyway Melancholy
+8875 : Club Nebula
+8876 : Voyager
+8877 : Moonlove
+8878 : Endangered Species (Tales From The Darkside) - Remix
+8879 : Jackin' For Beats
+8880 : Get Off My Dick And Tell Yo Bitch To Come Here - Remix
+8881 : The Product
+8882 : Dead Homiez
+8883 : JD's Gaffilin' - Part 2
+8884 : I Gotta Say What Up!!!
+8885 : Intro
+8886 : If I Die 2Nite
+8887 : Me Against The World
+8888 : So Many Tears
+8889 : Temptations
+8890 : Young Niggaz
+8891 : Heavy In The Game
+8892 : Lord Knows
+8893 : Dear Mama
+8894 : It Ain't Easy
+8895 : Can U Get Away
+8896 : Old School
+8897 : Fuck The World
+8898 : Death Around The Corner
+8899 : Outlaw
+8900 : Bitch Where
+8901 : Tuxedo (feat. Tadoe)
+8902 : See Through
+8903 : Say I Ain't Pick Yo Weak Ass Up (feat. Ballout)
+8904 : Like It's Yo Job
+8905 : Ice Cream Man
+8906 : Wazzup
+8907 : The Talk
+8908 : Yes Sir
+8909 : I Don't Think They Love Me
+8910 : Hurry B4 The Gate Close
+8911 : Hadouken
+8912 : On What
+8913 : Picking Big Sean Up - Bonus Track
+8914 : The Shot
+8915 : Really Doe
+8916 : Ghetto Bird
+8917 : You Know How We Do It
+8918 : Cave Bitch
+8919 : Bop Gun (One Nation)
+8920 : What Can I Do?
+8921 : Lil Ass Gee
+8922 : Make It Ruff, Make It Smooth
+8923 : Down For Whatever
+8924 : Enemy
+8925 : When I Get To Heaven
+8926 : What Can I Do? - Westside Remix
+8927 : What Can I Do? - Remix
+8928 : You Know How We Do It - Remix
+8929 : Lil Ass Gee - Remix

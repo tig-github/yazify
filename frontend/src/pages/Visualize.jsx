@@ -11,11 +11,14 @@ import {
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { Data } from "../utils.js";
+import InputPlaylist from "../components/InputPlaylist.jsx";
 import PieChart from "../components/PieChart.jsx";
 import BarChart from "../components/BarChart.jsx";
 import axios from "axios";
 
 const Visualize = () => {
+  const [chartData, setChartData] = useState({});
+
   const [userData, setUserData] = useState({
     labels: Data.map((d) => d.year),
     datasets: [
@@ -26,6 +29,10 @@ const Visualize = () => {
       },
     ],
   });
+
+  useEffect(() => {
+    console.log(chartData);
+  }, [chartData]);
 
   return (
     <>
@@ -38,7 +45,7 @@ const Visualize = () => {
             <ButtonGroup>
               <Link as={RouterLink} to="/">
                 <Button backgroundColor="#228B22" color="black" size="lg">
-                  Recommendations
+                  Recommend
                 </Button>
               </Link>
               <Link as={RouterLink} to="/chart">
@@ -48,8 +55,8 @@ const Visualize = () => {
               </Link>
             </ButtonGroup>
           </Flex>
-
-          <Box w="45%" h="45%">
+          <InputPlaylist setter={setChartData} />
+          <Box w="45%" h="45%" mt="4rem">
             <BarChart chartData={userData} />
           </Box>
         </Stack>
