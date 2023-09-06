@@ -47,8 +47,7 @@ def getChartData(playlist_id, key):
     elif key == 'albums':
         data = processAlbums(playlist_df)
     elif key == 'artists':
-        data = processArtists(playlist_df)
-    print(data)
+        data = processArtists(headers, playlist_df)
     return data
     
 

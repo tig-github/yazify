@@ -4,6 +4,7 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 import pandas
 from time import sleep
+from utils import getArtist
 
 # processes track data and audio data into dictionary
 def processTrack(track_content, audio_content, run = True):
@@ -148,7 +149,7 @@ def processReleases(playlist_df):
     
     
 # gathers all artists and how many songs they have in the playlist
-def processArtists(playlist_df):
+def processArtists(headers, playlist_df):
     releases = {}
     for artist in playlist_df['artist']:
         if artist in releases:
@@ -156,7 +157,7 @@ def processArtists(playlist_df):
         else:
             releases[artist] = 1
 
-    return [{'name':k, 'value':v} for k,v in releases.items()]
+    return [{'name':getArtist(headers, k), 'value':v} for k,v in releases.items()]
 
 
 # gathers all albums and how many songs they have in the playlist

@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import {
   Heading,
   Stack,
+  Text,
   Box,
   Flex,
   Button,
   ButtonGroup,
+  Select,
   Link,
   useToast,
 } from "@chakra-ui/react";
@@ -18,6 +20,8 @@ import axios from "axios";
 
 const Visualize = () => {
   const [chartData, setChartData] = useState([]);
+  const [chartType, setChartType] = useState("bar");
+  const [key, setKey] = useState("releases");
 
   const [userData, setUserData] = useState({
     labels: chartData.map((d) => d.name),
@@ -44,6 +48,14 @@ const Visualize = () => {
     });
   }, [chartData]);
 
+  const handleChartChange = (event) => {
+    setChartType(event.target.value);
+  };
+
+  const handleKeyChange = (event) => {
+    setKey(event.target.value);
+  };
+
   return (
     <>
       <Box bg="black" w="100%" h="100%">
@@ -65,10 +77,39 @@ const Visualize = () => {
               </Link>
             </ButtonGroup>
           </Flex>
-          <InputPlaylist setter={setChartData} />
-          <Box w="45%" h="45%" mt="4rem">
-            <BarChart chartData={userData} />
-          </Box>
+          <InputPlaylist setter={setChartData} k={key} />
+
+          <Flex>
+            <Select
+              color="#228B22"
+              borderColor="#228B22"
+              mr="1rem"
+              onChange={handleChartChange}
+            >
+              <option value="bar">Bar Graph</option>
+              <option value="pie">Pie Chart</option>
+            </Select>
+            <Select
+              color="#228B22"
+              borderColor="#228B22"
+              onChange={handleKeyChange}
+            >
+              <option value="releases">Release Date</option>
+              <option value="albums">Album</option>
+              <option value="artists">Artist</option>
+            </Select>
+          </Flex>
+
+          {chartType == "bar" && (
+            <Box w="45%" h="45%" mt="4rem">
+              <BarChart chartData={userData} />
+            </Box>
+          )}
+          {chartType == "pie" && (
+            <Box w="25%" h="25%" mt="4rem">
+              <PieChart chartData={userData} />
+            </Box>
+          )}
         </Stack>
       </Box>
     </>

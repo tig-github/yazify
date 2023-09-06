@@ -31,6 +31,8 @@ def visualize():
     query_playlist = request.args.get('playlist')
     query_key = request.args.get('key')
     playlist_id = query_playlist.split('/')[-1]
+    print(query_key)
+
     chartData = getChartData(playlist_id, query_key)
     print("Returning chart data")
     return chartData

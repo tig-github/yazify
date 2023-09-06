@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Input } from "@chakra-ui/react";
+import { Input, Switch, useToast } from "@chakra-ui/react";
 import axios from "axios";
 
-const InputPlaylist = ({ setter }) => {
+const InputPlaylist = ({ setter, k }) => {
   const [playlist, setPlaylist] = useState("");
-  const [key, setKey] = useState("releases");
 
   const handleChange = (event) => {
     const value = event.target.value;
@@ -13,7 +12,7 @@ const InputPlaylist = ({ setter }) => {
 
   const getPlaylists = async () => {
     try {
-      const res = await axios.get(`/visualize?playlist=${playlist}&key=${key}`);
+      const res = await axios.get(`/visualize?playlist=${playlist}&key=${k}`);
       console.log(`!!!! ${res}`);
 
       setter(res["data"]);
@@ -22,9 +21,21 @@ const InputPlaylist = ({ setter }) => {
       setter(["Error - request for recommendations failed."]);
     }
   };
+  const toast = useToast();
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    toast({
+      title: "Getting Chart Data",
+      description:
+        "Grabbing Chart Data - this takes far longer on playlists that are 1000+ songs. Changing options requires a resubmit.",
+      duration: 9000,
+      isClosable: true,
+      status: "info",
+      colorScheme: "green",
+
+      variant: "subtle",
+    });
     getPlaylists();
   };
 
