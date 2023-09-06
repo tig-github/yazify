@@ -17,14 +17,14 @@ import BarChart from "../components/BarChart.jsx";
 import axios from "axios";
 
 const Visualize = () => {
-  const [chartData, setChartData] = useState({});
+  const [chartData, setChartData] = useState([]);
 
   const [userData, setUserData] = useState({
-    labels: Data.map((d) => d.year),
+    labels: chartData.map((d) => d.name),
     datasets: [
       {
-        label: "Users Gained",
-        data: Data.map((d) => d.userGain),
+        label: "Releases",
+        data: chartData.map((d) => d.value),
         backgroundColor: ["green"],
       },
     ],
@@ -32,6 +32,16 @@ const Visualize = () => {
 
   useEffect(() => {
     console.log(chartData);
+    setUserData({
+      labels: chartData.map((d) => d.name),
+      datasets: [
+        {
+          label: "Releases",
+          data: chartData.map((d) => d.value),
+          backgroundColor: ["green"],
+        },
+      ],
+    });
   }, [chartData]);
 
   return (

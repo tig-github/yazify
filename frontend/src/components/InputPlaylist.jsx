@@ -14,9 +14,9 @@ const InputPlaylist = ({ setter }) => {
   const getPlaylists = async () => {
     try {
       const res = await axios.get(`/visualize?playlist=${playlist}&key=${key}`);
-      console.log(res);
-      //console.log(res["data"]["songs"]);
-      setter(res);
+      console.log(`!!!! ${res}`);
+
+      setter(res["data"]);
     } catch (error) {
       console.log(error);
       setter(["Error - request for recommendations failed."]);

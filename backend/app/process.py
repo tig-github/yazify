@@ -144,7 +144,7 @@ def processReleases(playlist_df):
             releases[year] += 1
         else:
             releases[year] = 1
-    return releases  
+    return sorted([{'name':k, 'value':v} for k,v in releases.items()], key=lambda x:x['name'])
     
     
 # gathers all artists and how many songs they have in the playlist
@@ -155,7 +155,8 @@ def processArtists(playlist_df):
             releases[artist] += 1
         else:
             releases[artist] = 1
-    return releases  
+
+    return [{'name':k, 'value':v} for k,v in releases.items()]
 
 
 # gathers all albums and how many songs they have in the playlist
@@ -166,4 +167,4 @@ def processAlbums(playlist_df):
             releases[album] += 1
         else:
             releases[album] = 1
-    return releases  
+    return [{'name':k, 'value':v} for k,v in releases.items()]
