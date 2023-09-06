@@ -12,10 +12,10 @@ simple song recommender using spotify api
    TBD by all user playlists, or track similarity that user inserts
    Return top scored tracks as recommendations
 3. Build UI for user to get recommendations (React frontend)
+4. provide data visualization for playlists
 
 ### todo
 
-4. provide data visualization at least for when songs are released, possibly for stats
 5. scrape all/more curated playlists
 6. use database to store all scraped songs
 7. build cache to store songs that already have been scored
