@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Input } from "@chakra-ui/react";
 import axios from "axios";
 
-const InputSong = ({ setter }, { test }) => {
+const InputSong = ({ setter }) => {
   const [song, setSong] = useState("");
 
   const handleChange = (event) => {
@@ -40,6 +40,7 @@ const InputSong = ({ setter }, { test }) => {
         focusBorderColor="#228B22"
         value={song}
         onChange={handleChange}
+        placeholder="Enter a spotify song"
       ></Input>
     </form>
   ); //will return a form

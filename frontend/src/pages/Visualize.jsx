@@ -12,11 +12,9 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
-import { Data } from "../utils.js";
 import InputPlaylist from "../components/InputPlaylist.jsx";
 import PieChart from "../components/PieChart.jsx";
 import BarChart from "../components/BarChart.jsx";
-import axios from "axios";
 
 const Visualize = () => {
   const [chartData, setChartData] = useState([]);
@@ -110,6 +108,7 @@ const Visualize = () => {
               <PieChart chartData={userData} />
             </Box>
           )}
+          <Box color="Black" h="25vh"></Box>
         </Stack>
       </Box>
     </>

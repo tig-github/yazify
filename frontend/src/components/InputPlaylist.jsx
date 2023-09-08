@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Input, Switch, useToast } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Input, useToast } from "@chakra-ui/react";
 import axios from "axios";
 
 const InputPlaylist = ({ setter, k }) => {
@@ -50,6 +50,7 @@ const InputPlaylist = ({ setter, k }) => {
         focusBorderColor="#228B22"
         value={playlist}
         onChange={handleChange}
+        placeholder="Enter a spotify playlist"
       ></Input>
     </form>
   ); //will return a form
