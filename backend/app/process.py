@@ -49,6 +49,7 @@ def processTrackBatch(headers, playlist_frame, ids, run = True):
         if not audio_batch1.json()['audio_features'][i]:
             continue
         processed_tracks1 = processTrack(track_batch1.json()['tracks'][i], audio_batch1.json()['audio_features'][i])
+        print(processed_tracks1)
         playlist_frame.loc[i+prev_length] = processed_tracks1
 
     if not ids2: return playlist_frame
@@ -124,7 +125,7 @@ def processPlaylist(headers, res, save = True, run = True):
     while playlist:
         ids = [track['track']['id'] for track in playlist['items']]
         playlist_frame = processTrackBatch(headers, playlist_frame, ids)
-        print(playlist_frame)
+        #print(playlist_frame)
         #sleep(30)
         try:
             playlist = requests.get(playlist['next'], headers=headers).json()
@@ -132,6 +133,28 @@ def processPlaylist(headers, res, save = True, run = True):
             break #finished scraping playlist
     if save: playlist_frame.to_csv('./app/csv/dataframe.csv')
     return playlist_frame
+    
+    
+# same as processPlaylist, but will continually expand the df instead of replaciging it
+def processPlaylistAddition(headers, res, run = True):
+    if not run: return
+    
+    playlist_frame = pandas.read_csv('./app/csv/dataframe.csv')
+    if len(playlist_frame.index) == 0:
+        playlist_frame = processPlaylist(headers, res)
+    else: #have to remove first column for it to work
+        playlist_frame = playlist_frame.iloc[: , 1:]
+    #continue_index = len(playlist_frame.index)
+    
+    playlist = res.json()['tracks']
+    while playlist:
+        ids = [track['track']['id'] for track in playlist['items']]
+        playlist_frame = processTrackBatch(headers, playlist_frame, ids)
+        try:
+            playlist = requests.get(playlist['next'], headers=headers).json()
+        except requests.exceptions.MissingSchema:
+            break #finished scraping playlist
+    playlist_frame.to_csv('./app/csv/dataframe.csv')
     
     
 # gather how many songs were released each year

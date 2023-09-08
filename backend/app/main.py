@@ -56,6 +56,16 @@ def refresh():
     headers = setup()
     playlist_response = scrapePlaylist(headers, run = True, save = True)
     processPlaylist(headers, playlist_response, run = True)
+    
+    
+# scrape all non-default playlists and add it to the database
+def scrape_spotify():
+    headers = setup()
+    with open('./app/txt/toscrape.txt', 'r', encoding="utf-8") as toscrape:
+        for playlist in toscrape:
+            playlist_response = scrapePlaylist(headers, playlist[34:], save = False)
+            processPlaylistAddition(headers, playlist_response, run = True)
+            
 
 # for exploring track data
 def explore():

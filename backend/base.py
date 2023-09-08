@@ -2,7 +2,7 @@ from flask import Flask
 from flask import request
 import sys
 sys.path.append('./app')
-from app.main import getRecommendations, refresh, getChartData
+from app.main import getRecommendations, refresh, scrape_spotify, getChartData
 
 api = Flask(__name__)
 
@@ -21,8 +21,9 @@ def my_songs():
 @api.route('/refresh')
 def refresh_songs():
     print('Updating song database')
-    refresh()
+    scrape_spotify()
     print('Finished updating the song database')
+    return 'success'
     
 
 @api.route('/visualize')
