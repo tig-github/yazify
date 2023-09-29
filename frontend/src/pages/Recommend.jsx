@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import InputSong from "../components/InputSong.jsx";
 import Songs from "../components/Songs.jsx";
 import {
@@ -18,8 +18,9 @@ import axios from "axios";
 
 const Recommend = () => {
   const [songs, setSongs] = useState(["Enter a Spotify Song Link"]);
-  // dev function to refresh database, will later be set in stone
+  let DEBUG_MODE = false;
   const refresh = async () => {
+    // dev function to refresh database for debug mode
     try {
       setSongs(["Updating song database..."]);
       await axios.get(`/refresh`);
@@ -56,30 +57,32 @@ const Recommend = () => {
 
           <Flex>
             <InputSong setter={setSongs} test={songs} />
-            <IconButton
-              colorScheme="green"
-              variant="outline"
-              ml="1rem"
-              mt=".25rem"
-              _hover={{ borderColor: "#228B22" }}
-              _focus={{ borderColor: "#228B22" }}
-              _active={{ color: "black", borderColor: "#228B22" }}
-              icon={<RepeatIcon />}
-              onClick={() => {
-                refresh();
-                toast({
-                  title: "Updating database",
-                  description:
-                    "Updating song database - this might take some time!",
-                  duration: 9000,
-                  isClosable: true,
-                  status: "info",
-                  colorScheme: "green",
+            {DEBUG_MODE && (
+              <IconButton
+                colorScheme="green"
+                variant="outline"
+                ml="1rem"
+                mt=".25rem"
+                _hover={{ borderColor: "#228B22" }}
+                _focus={{ borderColor: "#228B22" }}
+                _active={{ color: "black", borderColor: "#228B22" }}
+                icon={<RepeatIcon />}
+                onClick={() => {
+                  refresh();
+                  toast({
+                    title: "Updating database",
+                    description:
+                      "Updating song database - this might take some time!",
+                    duration: 9000,
+                    isClosable: true,
+                    status: "info",
+                    colorScheme: "green",
 
-                  variant: "subtle",
-                });
-              }}
-            />
+                    variant: "subtle",
+                  });
+                }}
+              />
+            )}
           </Flex>
           {songs && <Songs songs={songs} />}
         </Stack>
